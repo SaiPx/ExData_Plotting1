@@ -24,6 +24,10 @@ names(globalPow)<-c("Date","Time","Global_active_power",
 power2Days <- subset(globalPow, globalPow$Date=="1/2/2007" |
                              globalPow$Date =="2/2/2007")
 
+## Remove missing values
+power2Days <- power2Days[complete.cases(power2Days),]
+
+
 ## ----------------------------------- Plot 2 -------------------------
 ## Join Date and Time columns
 datetime <- strptime(paste(power2Days$Date, power2Days$Time), 

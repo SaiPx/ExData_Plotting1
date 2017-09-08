@@ -23,6 +23,9 @@ names(globalPow)<-c("Date","Time","Global_active_power",
 power2Days <- subset(globalPow, globalPow$Date=="1/2/2007" |
                                 globalPow$Date =="2/2/2007")
 
+## Remove missing values
+power2Days <- power2Days[complete.cases(power2Days),]
+
 ## Plot historgram to graphics to verify if image is right
 hist(as.numeric(as.character(power2Days$Global_active_power)),col="red",
      main="Global Active Power",xlab="Global Active Power(kilowatts)")
