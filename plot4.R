@@ -61,6 +61,7 @@ lines(power2Days$datetime, power2Days$Sub_metering_3, type = "l",
 
 ## Add legend
 legend("topright", lty= 1, col = c("Black", "red", "blue"),
+       inset=c(0.004, 0), adj=0, cex=0.8, y.intersp = 0.4,
        legend = c( "Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 ## Make Line Plot of Time versus Voltage
