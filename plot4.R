@@ -64,12 +64,10 @@ legend("topright", lty= 1, col = c("Black", "red", "blue"),
        legend = c( "Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 ## Make Line Plot of Time versus Voltage
-plot(power2Days$datetime, power2Days$Voltage, type = "l",
-     xlab = "datetime", ylab = "Voltage")
+plot(power2Days$datetime, power2Days$Voltage, type = "l")
 
 ## Make a Line Plot of Time versus Global Reactive Power
-plot(power2Days$datetime, power2Days$Global_reactive_power, type = "l",
-     xlab = "datetime", ylab = "Global_reactive_power")
+plot(power2Days$datetime, power2Days$Global_reactive_power, type = "l")
 
 ## Copy the Plot to a PNG file from output
 dev.copy(png, file="plot4.png", width=480, height=480)
